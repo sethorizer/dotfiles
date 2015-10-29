@@ -1,0 +1,48 @@
+" activate pathogen for loading plugins
+let g:pathogen_disabled = ['colors-solarized']
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+
+" Vim configurations
+set t_Co=256
+"colorscheme pablo
+colorscheme molokai
+
+set ts=3 sts=3 sw=3 smarttab shiftround
+set nu hidden
+
+
+" AIRLINE configuration
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = "dark"
+
+" GITGUTTER configuration
+"let g:gitgutter_map_keys = 0
+let g:gitgutter_realtime = 0
+
+" TASKLIST configuration
+let g:tlTokenList = ['\\unsure{', '\\change{', '\\improve{', '\\info{', 'FIXME', 'TODO', 'XXX']
+
+
+
+" Mappings
+let mapleader=" "
+nnoremap - <C-W>-
+nnoremap + <C-W>+
+nnoremap <C-_> <C-]>
+nnoremap <Leader>i :IndentGuidesToggle<CR>
+nnoremap <Leader>m :make<CR>
+nnoremap <Leader>s :%s/\v[ \t]+$//g<CR><C-O>
+
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
+
+autocmd FileType python set ts=4 sw=4 sts=4 et ai sta

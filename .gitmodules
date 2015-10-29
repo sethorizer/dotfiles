@@ -1,0 +1,30 @@
+[submodule "vim/bundle/airline"]
+	path = vim/bundle/airline
+	url = https://github.com/bling/vim-airline
+[submodule "vim/bundle/dirdiff"]
+	path = vim/bundle/dirdiff
+	url = https://github.com/will133/vim-dirdiff
+[submodule "vim/bundle/fugitive"]
+	path = vim/bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "vim/bundle/gitgutter"]
+	path = vim/bundle/gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/bundle/pathogen"]
+	path = vim/bundle/pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/bundle/sensible"]
+	path = vim/bundle/sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule "vim/bundle/tasklist"]
+	path = vim/bundle/tasklist
+	url = https://github.com/vim-scripts/TaskList.vim
+[submodule "vim/bundle/unimpaired"]
+	path = vim/bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule "vim/bundle/indent-guides"]
+	path = vim/bundle/indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule "vim/bundle/colorschemes"]
+	path = vim/bundle/colorschemes
+	url = https://github.com/flazz/vim-colorschemes
